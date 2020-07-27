@@ -1,7 +1,15 @@
-var path = require('path')
-const express = require('express')
-const mockAPIResponse = require('./mockAPI.js')
+const dotenv = require('dotenv');
+dotenv.config();
+projectData = {};
+const path = require('path');
+const express = require('express');
+// const mockAPIResponse = require('./mockAPI.js')
 
+const AYLIENTextAPI = require('aylien_textapi');
+const textapi = new aylien({
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
+ });
 const app = express()
 
 app.use(express.static('dist'))
@@ -18,6 +26,19 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
+/*
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
+})
+*/
+app.get('/all', (request, response) =>{
+    response.json(projectData)
+});
+
+app.post('/all', (request, response) =>{
+    projectData = request.body;
+    console.log(request.body);
+    response.status(200).json({
+        message: 'success'
+    });
 })
