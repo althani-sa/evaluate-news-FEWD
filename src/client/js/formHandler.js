@@ -1,12 +1,11 @@
-export function handleSubmit(event) {
-    event.preventDefault()
+export const handleSubmit = (e) => {
+    e.preventDefault()
 
     // check what text was put into the form field
     let URL = document.getElementById('name').value
 
-    Client.checkForName(URL)
+    Client.checkForLink(URL)
 
-    console.log("::: Form Submitted :::")
 
     let parseURL = {
         url: URL
@@ -22,8 +21,7 @@ export function handleSubmit(event) {
     })
     .then(res => res.json())
     .then(function(res) {
-
-        document.getElementById('form__results').innerHTML = res.polarity
+            document.getElementById('form__results').innerHTML = res.polarity
     })
 }
 
