@@ -1,5 +1,3 @@
-import { json } from "body-parser";
-
 export const handleSubmit = (e) => {
     e.preventDefault()
 
