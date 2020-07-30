@@ -1,5 +1,23 @@
-header {
+#headline{
+    display:flex;
+    justify-content: center;
+    margin: 0.5em;
+    padding: 0.5em;
+    color:white;
+}
+#headline:hover {
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+#subtitle{
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px 40px;
+    justify-content: center;
+    color: white;
+    display:flex;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+#subtitle:hover{
+    background: rgb(11,255,0);
+    background: linear-gradient(90deg, rgba(11,255,0,1) 0%, rgba(0,0,0,1) 100%);
 }

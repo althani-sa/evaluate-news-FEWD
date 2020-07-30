@@ -2,9 +2,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    // https://cssgradient.io/gradient-backgrounds/
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 main {
@@ -14,4 +16,31 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+strong {
+    margin: 1em;
+    color: rgb(140, 255, 140);
+}
+#form__results{
+    margin: 1em;
+    display:flex;
+    justify-items:center;
+    color: rgb(255, 255, 255);
+}
+
+#form__results:hover{
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+#confidence__results{
+    margin:1em;
+    display:flex;
+    justify-items:center;
+    color: rgb(255, 255, 255);
+}
+
+#confidence__results:hover{
+    text-decoration: underline;
+    text-decoration-color: green;
 }
