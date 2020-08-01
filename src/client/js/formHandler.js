@@ -8,8 +8,6 @@ export const handleSubmit = (e) => {
         url: URL
     };
 
-    // This is fine as it is, but it would be nicer to see this separated into another function to make sure that no requests go into the server.
-    // unless if they are URLS! I don't want to break it.
     fetch('http://localhost:8081/aylien', {
 
         headers: {
